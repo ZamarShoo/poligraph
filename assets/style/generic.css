@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "FuroreRegular";
+  src: url("../fonts/FuroreRegular.eot");
+  src: url("../fonts/FuroreRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/FuroreRegular.woff") format("woff"), url("../fonts/FuroreRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  --color-gray: #393838;
+  --color-dark-gray: #241d20;
+  --color-red: #f1554a;
+  --color-lavanda: #ab7d88;
+  --color-purple: #462761;
+}
+
+body {
+  padding: 0;
+  font-family: "FuroreRegular";
+  color: var(--color-gray);
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a.btn {
+  font-size: 18px;
+  display: inline-block;
+  width: 170px;
+  text-align: center;
+  padding: 9px 5px 10px;
+  border-radius: 15px;
+  background-color: var(--color-red);
+  cursor: pointer;
+}
+
+section {
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 25px;
+  margin: 0 auto;
+}/*# sourceMappingURL=generic.css.map */
