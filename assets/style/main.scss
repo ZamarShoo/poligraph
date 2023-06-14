@@ -4,7 +4,10 @@
 
 
 .header {
-    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+    max-width: 100vw;
+    overflow-x: hidden;
 
     h1 {
         margin-bottom: 30px;
@@ -56,6 +59,7 @@
 
     section {
         position: relative;
+        margin-top: 30px;
     }
 
     section header {
@@ -98,6 +102,25 @@
     }
 }
 
+.sidebar_main {
+    display: block;
+    padding: 35px 30px;
+    max-width: 330px;
+
+    nav ul li {
+        margin-bottom: 12px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav ul a {
+        font-size: 14px;
+        color: var(--color-dark-gray);
+    }
+}
+
 .social_buttons {
     
     a {
@@ -115,13 +138,74 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+#index_footer {
+    position: relative;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to bottom, white, white, rgba(255, 255, 255, 0.2));
+    }
+    
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+.header_index  .header_image {
+    top: auto;
+    bottom: 0;
+}
+
+@media screen and (max-width: 550px) {
     .sidebar {
         background-color: rgba($color: #fff4e9, $alpha: .6);
         max-width: 100%;
         margin: 0 auto;
+        width: 100%;
     }
     .header section header {
         padding: 35px 20px;
+    }
+    .header_index {
+        max-height: 100vh;
+    }
+    .header_image img {
+        width: 140vw;
+    }
+    .sidebar_main nav ul a {
+        font-size: 16px;
+    }
+
+    .header:not(.header_index) .header_image    {
+        left: 50%;
+        display: block;
+        position: absolute;
+        transform: translateX(-70vw);
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .header, header {
+        min-height: 700px;
+    }
+    .header {
+        margin-bottom: 30px;
     }
 }
