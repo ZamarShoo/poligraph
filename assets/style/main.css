@@ -22,15 +22,15 @@
   position: absolute;
   max-width: 100%;
   z-index: 1;
-  bottom: 0;
-  left: 0;
+  bottom: -5px;
+  left: -5px;
 }
 .header #cloud_right {
   position: absolute;
   max-width: 100%;
   z-index: 1;
-  bottom: 0;
-  right: 0;
+  bottom: -5px;
+  right: -5px;
 }
 .header #cloud_top {
   position: absolute;
@@ -43,8 +43,12 @@
 }
 .header #circle {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
+  top: -20%;
+  left: -20%;
+  pointer-events: none;
 }
 .header section {
   position: relative;
@@ -68,6 +72,8 @@
 }
 
 .sidebar {
+  position: relative;
+  z-index: 20;
   padding: 45px;
   background-color: #fff4e9;
   border-radius: 15px;
@@ -185,6 +191,30 @@ main section h2 {
   text-align: center;
   margin: 100px auto 70px;
   color: var(--color-lavanda);
+}
+
+#arrows_section {
+  position: relative;
+}
+#arrows_section img {
+  position: absolute;
+  top: -100px;
+  cursor: pointer;
+  display: inline-block;
+  z-index: 20;
+}
+#arrows_section #prev {
+  left: 25px;
+}
+#arrows_section #next {
+  right: 25px;
+  transform: rotate(180deg);
+}
+
+#snow {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 550px) {
