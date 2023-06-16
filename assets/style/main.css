@@ -4,7 +4,6 @@
   position: relative;
   z-index: 1;
   max-width: 100vw;
-  overflow-x: hidden;
 }
 .header h1 {
   margin-bottom: 30px;
@@ -146,6 +145,46 @@
 .header_index .header_image {
   top: auto;
   bottom: 0;
+}
+
+.owl-carousel {
+  position: relative;
+}
+.owl-carousel .owl-item {
+  transition: 0.3s;
+}
+.owl-carousel .owl-item:not(.active.center) {
+  opacity: 0.3;
+}
+.owl-carousel .owl-item {
+  transform: scale(0.7);
+}
+.owl-carousel .owl-item.active.center {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.owl-carousel::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), white);
+}
+
+main section h2 {
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  margin: 100px auto 70px;
+  color: var(--color-lavanda);
 }
 
 @media screen and (max-width: 550px) {
