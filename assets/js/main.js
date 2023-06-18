@@ -3,13 +3,13 @@ if (Boolean($('.owl-carousel').length)) {
 
     owl.owlCarousel({
         center: true,
-        items:2,
+        items:1,
         loop:true,
         margin:50,
         dots: false,
         responsive:{
             600:{
-                items:4
+                items:3
             }
         }
     });
